@@ -2,7 +2,7 @@ abstract class Entity<Props> {
 	constructor(protected props: Props) {}
 
 	toJSON(): Props {
-		return this.props;
+		return {...this.props};
 	}
 }
 
@@ -26,5 +26,5 @@ const product1 = new Product({
 	description: 'string',
 	price: 34.75,
 });
-console.log('***************************************')
+console.log('------------------------------------')
 console.log(product1.toJSON());
